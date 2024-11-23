@@ -31,5 +31,4 @@ public class Person<T extends Edible> implements NoiseMaker, Eater<T> {
     public boolean hasEaten(T edible) {
         return consumedItems.contains(edible);
     }
-    //sadsadadadasd
 }
