@@ -21,11 +21,12 @@ public class Person<T extends Edible> implements NoiseMaker, Eater<T> {
     }
 
     @Override
-    public void eat(T edible) {
+    public boolean eat(T edible) {
         if (edible == null) {
             throw new IllegalArgumentException("Cannot eat null.");
         }
         consumedItems.add(edible);
+        return true;
     }
 
     public boolean hasEaten(T edible) {
