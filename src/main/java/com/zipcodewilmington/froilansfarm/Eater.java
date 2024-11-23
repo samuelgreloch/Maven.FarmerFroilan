@@ -1,5 +1,5 @@
 package com.zipcodewilmington.froilansfarm;
 
-public interface Eater<T> {
-    void eat(T edible);
+public interface Eater<T extends Edible> {
+    boolean eat(T edible);
 }
