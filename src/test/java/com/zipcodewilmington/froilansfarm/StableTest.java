@@ -1,7 +1,9 @@
 package com.zipcodewilmington.froilansfarm;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.testng.Assert;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +21,7 @@ public class StableTest {
 
         stable.setHorse(horses);
 
-        Assert.assertFalse(stable.getHorse().isEmpty());
+        Assertions.assertFalse(stable.getHorse().isEmpty());
         Assert.assertEquals(4,stable.getHorse().size());
       //  horses.clear();
 
@@ -57,7 +59,6 @@ public class StableTest {
         Assert.assertEquals(0,stable.getHorse().size());
         horses.clear();
     }
-
 
 
 }
