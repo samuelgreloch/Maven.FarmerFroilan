@@ -9,7 +9,7 @@ public class CropTest {
     @Test
     public void testFertilization() {
         Tomato tomato = new Tomato();
-        Crop<Edible> crop = new Crop<>(tomato);
+        Crop<Tomato> crop = new Crop<>(tomato);
         assertFalse(crop.hasBeenFertilized(), "Crop should not be fertilized initially.");
         crop.fertilize();
         assertTrue(crop.hasBeenFertilized(), "Crop should be fertilized after calling fertilize.");
@@ -29,7 +29,15 @@ public class CropTest {
     public void testHarvest() {
         EarCorn corn = new EarCorn();
         Crop<EarCorn> cornStalk = new Crop<>(corn);
+        cornStalk.fertilize();
         cornStalk.harvest();
         assertTrue(cornStalk.hasBeenHarvested(), "The Cornstalk has been harvested.");
+    }
+
+    @Test
+    public void testIsProduce() {
+        Tomato tomato = new Tomato();
+        Crop<Tomato> tomatoPlant = new Crop<>(tomato);
+        assertTrue(tomatoPlant instanceof Produce, "Crop should implement Produce interface.");
     }
 }
