@@ -15,11 +15,14 @@ public class ProduceTest {
         assertTrue(crop.hasBeenFertilized(), "Crop was fertilized.");
     }
 
-//    @Test
-//    public void testYield() {
-//        EarCorn corn = new EarCorn();
-//        Produce<Edible> crop = new Crop<>(corn);
-//        crop.yield();
-//        Assert.assertTrue(crop.yield() instanceof Crop<>(corn));
-//    }
+    @Test
+    public void testYield() {
+        EarCorn corn = new EarCorn();
+        Produce<EarCorn> crop = new Crop<>(corn);
+        crop.fertilize();
+        Edible earCorn = crop.yield();
+
+        assertTrue(earCorn instanceof EarCorn, "Yielded an EarCorn");
+    }
+
 }
