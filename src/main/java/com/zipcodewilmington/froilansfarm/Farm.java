@@ -6,7 +6,7 @@ import java.util.List;
 public class Farm {
     List<Stable> stables = new ArrayList<>();
     List<ChickenCoop> chickenCoops = new ArrayList<>();
-    FarmHouse house;
+    List<FarmHouse> house = new ArrayList<>();
 
 
 
@@ -40,11 +40,11 @@ public class Farm {
         return chickenCoops;
     }
 
-    public void setHouse(FarmHouse house1){
+    public void setHouse(List<FarmHouse> house1){
         this.house = house1;
     }
 
-    public FarmHouse getHouse() {
+    public List<FarmHouse> getHouse() {
         return house;
     }
 }

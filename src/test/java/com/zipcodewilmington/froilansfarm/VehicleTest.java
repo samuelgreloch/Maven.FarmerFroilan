@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.testng.Assert;
+
 
 public class VehicleTest {
 
@@ -9,7 +10,7 @@ public class VehicleTest {
     public void VehicleMakesNoiseTest (){
 
 
-        Assert.assertTrue(Trator.vehcileMakesNoise);
+        Assertions.assertTrue(Trator.vehcileMakesNoise);
     }
 
 
