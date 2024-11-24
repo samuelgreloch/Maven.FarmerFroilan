@@ -10,7 +10,7 @@ public class CornStalkTest {
     @Test
     public void checkInitialState(){
         EarCorn earCorn = new EarCorn();
-        CornStalk cornStalk = new CornStalk(earCorn);
+        CornStalk cornStalk = new CornStalk();
         assertFalse(cornStalk.hasBeenFertilized(), "Hasn't been fertilized yet.");
 
         assertFalse(cornStalk.hasBeenHarvested(), "Hasn't been harvested yet.");
@@ -19,7 +19,7 @@ public class CornStalkTest {
     @Test
     public void checkFertilized(){
         EarCorn earCorn = new EarCorn();
-        CornStalk cornStalk = new CornStalk(earCorn);
+        CornStalk cornStalk = new CornStalk();
 
         cornStalk.fertilize();
         assertTrue(cornStalk.hasBeenFertilized(), "The cornstalk has been fertilized.");
@@ -28,7 +28,7 @@ public class CornStalkTest {
     @Test
     public void checkHarvest(){
         EarCorn earCorn = new EarCorn();
-        CornStalk cornStalk = new CornStalk(earCorn);
+        CornStalk cornStalk = new CornStalk();
         cornStalk.fertilize();
         cornStalk.harvest();
         assertTrue(cornStalk.hasBeenFertilized(), "The cornstalk has been harvested.");

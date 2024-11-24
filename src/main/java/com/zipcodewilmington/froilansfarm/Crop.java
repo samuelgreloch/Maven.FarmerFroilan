@@ -11,6 +11,9 @@ public class Crop<T extends Edible> implements Produce<T>{
         this.harvested = false;
     }
 
+    public Crop() {
+    }
+
 
     @Override
     public boolean hasBeenFertilized() {
