@@ -19,7 +19,7 @@ public class AnimalTest {
     @Test
     public void NoiseMakerCanMakeNoise(){
         String name = "Froilan";
-        String noise = "Hi";
+        String noise = "Hello!";
         //To be continued...
         NoiseMaker noiseMaker = new Person(name);
         assertEquals(noise, noiseMaker.makeNoise());
@@ -29,7 +29,7 @@ public class AnimalTest {
     //Animal is a NoiseMaker and Eater
     @Test
     public void AnimalIsNoiseMakerAndEater(){
-        String noise = "Nay!";
+        String noise = "Neigh!";
         Animal animal = new Horse();
         NoiseMaker noiseMaker = new Horse();
         Eater eater = new Horse();
