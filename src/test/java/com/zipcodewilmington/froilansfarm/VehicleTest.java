@@ -1,61 +1,64 @@
 package com.zipcodewilmington.froilansfarm;
 import org.junit.jupiter.api.Test;
+import org.testng.Assert;
 
 public class VehicleTest {
 
-@Test
+    @Test
 
     public void VehicleMakesNoiseTest (){
 
-}
+
+        Assert.assertTrue(Trator.vehcileMakesNoise);
+    }
 
 
-@Test
+    @Test
 
     public void VehicleIsRidableTest(){
 
-}
+    }
 
-@Test
+    @Test
 
     public void CanOperateTest(){
 
-}
+    }
 
-@Test
+    @Test
 
     public void isVehicleTest(){
 
-}
+    }
 
-@Test
+    @Test
 
     public void CanFly(){
 
-}
+    }
 
-@Test
+    @Test
 
     public void isAircraftTest(){
 
-}
+    }
 
-@Test
+    @Test
 
     public void FertilizeTest(){
 
-}
+    }
 
-@Test
+    @Test
 
     public void HarvestTest(){
 
-}
+    }
 
-@Test
+    @Test
 
     public void CanOperate(){
 
-}
+    }
 
 }
