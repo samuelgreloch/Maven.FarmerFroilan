@@ -19,7 +19,7 @@ public class AnimalTest {
     @Test
     public void NoiseMakerCanMakeNoise(){
         String name = "Froilan";
-        String noise = "Hi";
+        String noise = "Hello!";
         //To be continued...
         NoiseMaker noiseMaker = new Person(name);
         assertEquals(noise, noiseMaker.makeNoise());
@@ -27,6 +27,20 @@ public class AnimalTest {
     }
 
     //Animal is a NoiseMaker and Eater
+    @Test
+    public void AnimalIsNoiseMakerAndEater(){
+        String noise = "Neigh!";
+        Animal animal = new Horse();
+        NoiseMaker noiseMaker = new Horse();
+        Eater eater = new Horse();
+
+        assertEquals(noise, noiseMaker.makeNoise());
+        //Make test to test that Animal is an Eater use the concrete Horse class
+        // assertTrue(eater.eat())
+
+    }
+
+
     //Horse is an Animal and Rideable
     //Chicken is an Animal
     // and a Produce which yield an EdibleEgg if hasBeenFertilized flag is false.
