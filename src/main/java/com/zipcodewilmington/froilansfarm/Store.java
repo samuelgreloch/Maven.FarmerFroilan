@@ -8,6 +8,6 @@ public class Store<T> extends ArrayList<T> {
     List<Horse> horse = new ArrayList<>();
     List<Chicken> chickens = new ArrayList<>();
 
-    FarmHouse house;
+  //  FarmHouse house;
     List<Person> people = new ArrayList<>();
 }

@@ -2,6 +2,8 @@ package com.zipcodewilmington.froilansfarm;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+//import org.testng.Assert;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -64,11 +66,14 @@ public class FarmTest {
 
     @Test
     public void farmHouseCountTest(){
+        List<FarmHouse> farm1 = new ArrayList<>();
         Farm farm = new Farm();
-        farm.setHouse(new FarmHouse());
+        //FarmHouse farm1 = new FarmHouse();
+        farm1.add(new FarmHouse());
+        farm.setHouse(farm1);
 
-       // Assert.assertEquals(1,farm.getHouse().size());
-       // Assert.assertFalse(farm.getHouse().isEmpty());
+        Assertions.assertEquals(1,farm.getHouse().size());
+        Assertions.assertFalse(farm.getHouse().isEmpty());
 
     }
 
