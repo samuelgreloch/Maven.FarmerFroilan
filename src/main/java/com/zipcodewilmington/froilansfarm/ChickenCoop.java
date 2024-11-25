@@ -13,7 +13,7 @@ public class ChickenCoop extends Store<Chicken>{
     }
 
     public List<Chicken> getChicken(){
-        return chickens;
+        return store.chickens;
     }
 
     @Override
