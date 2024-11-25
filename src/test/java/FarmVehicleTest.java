@@ -18,7 +18,7 @@ public class FarmVehicleTest {
 
     @Test
 
-    public void VehicleIsRidableTest(){
+    public void FarmVehicle(){
 
         Vehicle vehicle = new Vehicle(true, false, true) {
 
@@ -74,7 +74,7 @@ public class FarmVehicleTest {
 
     public void canHarvestTest(){
 
-Tractor tractor = new Tractor();
+Tractor tractor = new Tractor(false,true,false);
 
         assert tractor.canHarvest()==true;
 

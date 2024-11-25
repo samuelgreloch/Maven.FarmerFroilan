@@ -7,9 +7,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class TractorTest {
     @Test
 
-    public void VehicleMakesNoiseTest (){
-        Vehicle vehicle = new Vehicle();
-        String noise = vehicle.makeNoise();
+    public void TractorMakeNoise (){
+        Tractor tractor = new Tractor(false,true,false);
+        String noise = tractor.makeNoise();
         assertEquals("vRoom", noise);
     }
 
@@ -18,11 +18,11 @@ class TractorTest {
 
     public void VehicleIsRidableTest(){
 
-        Vehicle vehicle = new Vehicle(true, false, true) {
+        Tractor tractor = new Tractor(true, false, true) {
 
         };
 
-        assertTrue(vehicle.isRidable(), "This vehicle is not ridable when it's broken, has no fuel, and is being repaired.");
+        assertTrue(tractor.isRidable(), "This vehicle is not ridable when it's broken, has no fuel, and is being repaired.");
 
     }
 
@@ -30,11 +30,11 @@ class TractorTest {
 
     public void CanOperateTest(){
 
-        Vehicle vehicle = new Vehicle(false, true, false) {
+        Tractor tractor = new Tractor(false, true, false) {
 
         };
 
-        assertTrue(vehicle.canOperate(), "This vehicle can operate when it's not broken, has fuel, and isn't being repaired.");
+        assertTrue(tractor.canOperate(), "This vehicle can operate when it's not broken, has fuel, and isn't being repaired.");
 
     }
 
@@ -58,7 +58,7 @@ class TractorTest {
 
     public void canHarvestTest(){
 
-        Tractor tractor = new Tractor();
+        Tractor tractor = new Tractor(false,true,false);
 
         assert tractor.canHarvest()==true;
 
