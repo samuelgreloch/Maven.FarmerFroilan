@@ -1,4 +1,4 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Rider {
+public interface  Rider<A> {
 }

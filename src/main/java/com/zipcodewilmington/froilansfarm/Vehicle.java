@@ -1,12 +1,23 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Vehicle<T extends Rider> implements NoiseMaker,Rideable{
+public class Vehicle<T extends Rider> implements NoiseMaker, Rideable{
+    public static boolean vehcileMakesNoise;
 
-
-    private Object tractor;
-
-    @Override
-    public String makeNoise() {
-        return "";
+    public Vehicle(boolean b, boolean b1, boolean b2) {
     }
+
+    public Vehicle(String genericVehicle) {
+    }
+
+    public boolean isRidable() {
+  return true;  }
+
+    public boolean canOperate() {
+    return true;}
+
+    public boolean isVehicle() {
+   return false; }
+
+    public String makeNoise() {
+   return "vroom"; }
 }

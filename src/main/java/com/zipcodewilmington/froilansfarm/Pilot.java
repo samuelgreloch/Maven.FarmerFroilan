@@ -1,6 +1,4 @@
 package com.zipcodewilmington.froilansfarm;
 
-//public interface Pilot implements Rider<A> {
-
-
-//}
+public class Pilot implements Rider<Aircraft> {
+}
