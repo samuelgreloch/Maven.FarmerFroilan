@@ -1,5 +1,4 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Rider {
-
+public class EveryMorningRoutine {
 }
