@@ -4,6 +4,6 @@ public class Aircraft extends Vehicle<Pilot> {
         super(b, b1, b2);
     }
 
-    public static boolean canFly() {
+    public boolean canFly() {
   return true;  }
 }

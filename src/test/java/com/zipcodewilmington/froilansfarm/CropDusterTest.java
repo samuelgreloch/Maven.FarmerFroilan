@@ -53,9 +53,9 @@ class CropDusterTest {
                 @Test
 
                 public void CanFly(){
-
-                        Aircraft.canFly();
-                        assertTrue(Aircraft.canFly(), "This aircraft can fly.");
+                        Aircraft aircraft = new Aircraft(false,true,false);
+                        aircraft.canFly();
+                        assertTrue(aircraft.canFly(), "This aircraft can fly.");
 
                 }
 

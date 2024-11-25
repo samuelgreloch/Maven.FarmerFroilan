@@ -44,9 +44,9 @@ public class VehicleTest {
     @Test
 
     public void CanFly(){
-
-        Aircraft.canFly();
-        assertTrue(Aircraft.canFly(), "This aircraft can fly.");
+        Aircraft aircraft = new Aircraft(true,false,true);
+        aircraft.canFly();
+        assertTrue(aircraft.canFly(), "This aircraft can fly.");
 
     }
 

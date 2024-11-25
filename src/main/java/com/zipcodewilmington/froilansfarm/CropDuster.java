@@ -8,4 +8,14 @@ public class CropDuster extends FarmVehicle<Pilot> {
 
     public static boolean isFertilizing() {
    return true; }
+
+
+    public boolean ride() {
+        return false;
+    }
+
+
+    public boolean canMount() {
+        return false;
+    }
 }
