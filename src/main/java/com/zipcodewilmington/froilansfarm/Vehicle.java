@@ -3,7 +3,7 @@ package com.zipcodewilmington.froilansfarm;
 public  class Vehicle<T extends Rider> implements NoiseMaker, Rideable{
     public static boolean vehcileMakesNoise;
 
-    public Vehicle(boolean b, boolean b1, boolean b2) {
+    public Vehicle(boolean isBroken, boolean hasFuel, boolean isRepaired) {
     }
 
     public Vehicle(String genericVehicle) {
@@ -18,8 +18,13 @@ public  class Vehicle<T extends Rider> implements NoiseMaker, Rideable{
     public boolean isVehicle() {
    return false; }
 
-    public String makeNoise() {
-   return "vroom"; }
+    public String makeNoise(T rider) {
+        if (rider instanceof Pilot) {
+            return "Aircraft noise: Whoosh!";
+        } else if (rider instanceof Person) {
+            return "Tractor noise: Vroom Vroom!";
+        }
+        return "Generic vehicle noise: Vroom"; }
 
     @Override
     public boolean canMount() {
@@ -54,5 +59,9 @@ public  class Vehicle<T extends Rider> implements NoiseMaker, Rideable{
     @Override
     public boolean ride() {
         return false;
+    }
+
+    public String makeNoise() {
+        return "";
     }
 }
