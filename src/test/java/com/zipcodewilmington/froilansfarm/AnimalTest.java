@@ -45,16 +45,61 @@ public class AnimalTest {
     @Test
     public void HorseIsAnimalAndRideable() {
 
-    Animal animal = new Horse();
-    Rideable rideable = new Horse();
+        Animal animal = new Horse();
+        Rideable rideable = new Horse();
 
-    assertTrue(rideable.canRide());
+        assertTrue(rideable.ride());
 
     }
 
     //Chicken is an Animal and a Produce
-    Animal animal = new Chicken();
-    Produce produce = new Chicken();
+    @Test
+    public void ChickenIsAnimalProduce() {
+
+    //Animal<EarCorn> animal = new Chicken<EarCorn>();
+
+    //Edible edible = new EarCorn();
+    //Produce<Egg> produce = new Chicken<Egg>();
 
     // which yield an EdibleEgg if hasBeenFertilized flag is false.
+}
+
+    @Test
+    public void ChickenIsAnAnimalTest(){
+        Chicken chicken = new Chicken();
+        assertTrue(chicken instanceof Animal);
+    }
+
+    @Test
+    public void ChickenIsAProduceTest(){
+
+        Chicken chicken = new Chicken();
+        assertTrue(chicken instanceof Produce);
+    }
+    @Test
+    public void ChickenMakesNoiseTest(){
+
+        String noise = "Cluck!";
+        Chicken chicken = new Chicken();
+        assertEquals(noise, chicken.makeNoise());
+    }
+
+   @Test
+   public void ChickenEatsTest(){
+        Chicken chicken = new Chicken();
+        Edible edibleFood = new EarCorn();
+        assertTrue(chicken.eat(edibleFood));
+   }
+
+   /*@Test
+    public void ChickenYieldEdibleEgg(){
+       Chicken chicken = new Chicken();
+       chicken.setHasBeenFertilized(false);
+       Produce<Egg>  egg = chicken.yield();
+       assertTrue(egg instanceof Edible<Egg>);
+
+
+   }*/
+
+
 }
