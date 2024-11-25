@@ -40,13 +40,13 @@ class TractorTest {
 
     @Test
 
-    public void isVehicleTest(){
+    public void isTractorTest(){
 
-        Vehicle vehicle = new Vehicle("Generic Vehicle") {
+        Tractor tractor = new Tractor(false,true,false) {
 
         };
 
-        assertTrue(vehicle.isVehicle(), "The object should be a vehicle.");
+        assertTrue(tractor.isTractor(), "The object should be a vehicle.");
 
 
 

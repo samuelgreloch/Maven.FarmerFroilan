@@ -10,7 +10,7 @@ public class FarmVehicleTest {
     @Test
 
     public void VehicleMakesNoiseTest (){
-        Vehicle vehicle = new Vehicle();
+        Vehicle vehicle = new Vehicle("false");
         String noise = vehicle.makeNoise();
         assertEquals("vRoom", noise);
     }
