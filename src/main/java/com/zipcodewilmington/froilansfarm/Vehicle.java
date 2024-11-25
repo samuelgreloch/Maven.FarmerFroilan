@@ -9,4 +9,14 @@ public class Vehicle<T extends Rider> implements NoiseMaker,Rideable{
     public String makeNoise() {
         return "";
     }
+
+    @Override
+    public boolean ride() {
+        return false;
+    }
+
+    @Override
+    public boolean canMount() {
+        return false;
+    }
 }
