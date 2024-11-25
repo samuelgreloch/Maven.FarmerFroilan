@@ -19,4 +19,7 @@ public class Tractor extends FarmVehicle<Rider> {
 
     public boolean canOperate() {
    return false; }
+
+    public boolean isTractor() {
+   return true; }
 }
