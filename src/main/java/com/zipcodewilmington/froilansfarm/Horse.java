@@ -21,5 +21,7 @@ public class Horse extends Animal{
         return "Neigh!";
     }
 
-
+    public int getHorseId() {
+        return horseId;
+    }
 }
