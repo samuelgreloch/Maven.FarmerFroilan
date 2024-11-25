@@ -10,4 +10,11 @@ public class EarCorn implements Edible {
 //    public int hashCode() {
 //        return super.hashCode(); // Ensure consistency with equals
 //    }
+
+    @Override
+    public boolean isEdible() {
+        return false;
+    }
+
+
 }
