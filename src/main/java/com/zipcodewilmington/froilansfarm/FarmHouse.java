@@ -10,9 +10,8 @@ public class FarmHouse extends Store<Person> {
         store.people = people;
     }
 
-    public List<Person> getPersonCount(){
-        return people;
-    }
-
+//    public List<Person> getPersonCount(){
+//        return people;
+//    }
 
 }

@@ -1,9 +1,11 @@
-package com.zipcodewilmington.froilansfarm;
+import com.zipcodewilmington.froilansfarm.Trator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 
-public class VehicleTest {
+import static org.junit.jupiter.api.Assertions.*;
+
+public class FarmVehicleTest {
 
     @Test
 

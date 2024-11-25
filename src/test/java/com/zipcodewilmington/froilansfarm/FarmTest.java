@@ -1,7 +1,8 @@
 package com.zipcodewilmington.froilansfarm;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.testng.Assert;
+//import org.testng.Assert;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,8 +26,8 @@ public class FarmTest {
         stableList.add(new Stable());
         farms.setStables(stableList);
 
-        Assert.assertFalse(farms.getStables().isEmpty());
-        Assert.assertEquals(1,farms.stables.size());
+        Assertions.assertFalse(farms.getStables().isEmpty());
+        Assertions.assertEquals(1,farms.stables.size());
 
     }
 
@@ -50,8 +51,8 @@ public class FarmTest {
         Farm farm = new Farm();
         farm.setChickenCoop(chickenCoopList);
 
-        Assert.assertEquals(4,farm.getChickenCoops().size());
-        Assert.assertFalse(farm.getChickenCoops().isEmpty());
+        Assertions.assertEquals(4,farm.getChickenCoops().size());
+        Assertions.assertFalse(farm.getChickenCoops().isEmpty());
 
     }
 
@@ -65,11 +66,14 @@ public class FarmTest {
 
     @Test
     public void farmHouseCountTest(){
+        List<FarmHouse> farm1 = new ArrayList<>();
         Farm farm = new Farm();
-        farm.setHouse(new FarmHouse());
+        //FarmHouse farm1 = new FarmHouse();
+        farm1.add(new FarmHouse());
+        farm.setHouse(farm1);
 
-       // Assert.assertEquals(1,farm.getHouse().size());
-       // Assert.assertFalse(farm.getHouse().isEmpty());
+        Assertions.assertEquals(1,farm.getHouse().size());
+        Assertions.assertFalse(farm.getHouse().isEmpty());
 
     }
 
