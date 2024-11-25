@@ -11,7 +11,12 @@ public class Vehicle<T extends Rider> implements NoiseMaker,Rideable{
     }
 
     @Override
-    public boolean canRide() {
+    public boolean ride() {
+        return false;
+    }
+
+    @Override
+    public boolean canMount() {
         return false;
     }
 }

@@ -1,5 +1,11 @@
 package com.zipcodewilmington.froilansfarm;
 
 public interface Rideable {
-    boolean canRide();
+    // Method to check if the ride is possible, returns a boolean
+    boolean ride();
+
+    // Method to check if it can be mounted, returns a boolean
+    boolean canMount();
+
 }
+
