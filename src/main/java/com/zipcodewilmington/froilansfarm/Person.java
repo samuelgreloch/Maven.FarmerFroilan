@@ -32,4 +32,18 @@ public class Person<T extends Edible> implements NoiseMaker, Eater<T> {
     public boolean hasEaten(T edible) {
         return consumedItems.contains(edible);
     }
+
+//Deepti added
+    public int numberComsumed(T edible) {
+        int counter=0;
+        for(int i=0; i<consumedItems.size(); i++){
+            if(consumedItems.get(i).equals(edible)){
+                counter ++;
+            }
+        }
+
+        return counter;
+    }
+//Deepti added
+
 }

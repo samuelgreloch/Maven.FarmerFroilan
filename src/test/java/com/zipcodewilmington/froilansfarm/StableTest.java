@@ -44,8 +44,8 @@ public class StableTest {
 
         stable.setHorse(horseStore);
 
-        Assertions.assertFalse(stable.store.horse.isEmpty());
-        Assertions.assertEquals(8,stable.store.horse.size());
+        Assertions.assertFalse(stable.getHorse().isEmpty());
+        Assertions.assertEquals(8,stable.getHorse().size());
        // horses.clear();
     }
 
@@ -62,5 +62,24 @@ public class StableTest {
         horses.clear();
     }
 
+
+    //Test to add Horses across 4 Stables
+    @Test
+    public void addHorseToStableTest(){
+        Stable stable = new Stable();
+        Store<Horse> horseList = new Store<>();
+
+
+        for (int i = 1; i <= 10; i++) {
+            Horse horse = new Horse(i);
+            horseList.add(horse);
+
+        }
+
+        stable.setHorse(horseList);
+
+        Assertions.assertEquals(10,stable.getHorse().size());
+
+    }
 
 }
