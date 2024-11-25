@@ -16,11 +16,11 @@ public class ChickenCoop extends Store<Chicken>{
         return store.chickens;
     }
 
-    @Override
-    public String toString() {
-        return "ChickenCoop{" +
-                "store=" + store +
-                ", chickens=" + chickens +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "ChickenCoop{" +
+//                "store=" + store +
+//                ", chickens=" + chickens +
+//                '}';
+//    }
 }
