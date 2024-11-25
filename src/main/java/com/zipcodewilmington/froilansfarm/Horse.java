@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Horse extends Animal{
+public class Horse extends Animal implements Rideable {
     private int horseId;
 
     public Horse(int horseId) {
@@ -23,5 +23,11 @@ public class Horse extends Animal{
 
     public int getHorseId() {
         return horseId;
+    }
+
+
+    @Override
+    public boolean canRide() {
+        return false;
     }
 }
