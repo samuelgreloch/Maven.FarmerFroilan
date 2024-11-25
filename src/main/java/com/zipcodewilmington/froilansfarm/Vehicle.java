@@ -9,11 +9,6 @@ public  class Vehicle<T extends Rider> implements NoiseMaker, Rideable{
     public Vehicle(String genericVehicle) {
     }
 
-    public Vehicle(){
-
-
-    }
-
     public boolean isRidable() {
   return true;  }
 

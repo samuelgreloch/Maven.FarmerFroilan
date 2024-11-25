@@ -55,9 +55,10 @@ public class VehicleTest {
     public void isAircraftTest(){
         FarmVehicle<Pilot> farmVehicle = new FarmVehicle<Pilot>(""){};
 
-        assertFalse(false, "FarmVehicle should not be an instance of Aircraft.");
+        assertFalse(farmVehicle.isVehicle(), "FarmVehicle should not be an instance of Aircraft.");
 
     }
 
 
-}
+
+    }
