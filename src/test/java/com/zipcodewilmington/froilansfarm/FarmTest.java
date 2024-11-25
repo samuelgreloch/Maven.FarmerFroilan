@@ -1,8 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.testng.Assert;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,8 +24,8 @@ public class FarmTest {
         stableList.add(new Stable());
         farms.setStables(stableList);
 
-        Assert.assertFalse(farms.getStables().isEmpty());
-        Assert.assertEquals(1,farms.stables.size());
+        Assertions.assertFalse(farms.getStables().isEmpty());
+        Assertions.assertEquals(1,farms.stables.size());
 
     }
 
@@ -50,8 +49,8 @@ public class FarmTest {
         Farm farm = new Farm();
         farm.setChickenCoop(chickenCoopList);
 
-        Assert.assertEquals(4,farm.getChickenCoops().size());
-        Assert.assertFalse(farm.getChickenCoops().isEmpty());
+        Assertions.assertEquals(4,farm.getChickenCoops().size());
+        Assertions.assertFalse(farm.getChickenCoops().isEmpty());
 
     }
 

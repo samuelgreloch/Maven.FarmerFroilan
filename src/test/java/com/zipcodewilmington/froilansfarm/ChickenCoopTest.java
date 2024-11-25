@@ -1,8 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.testng.Assert;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,8 +18,8 @@ public class ChickenCoopTest {
     chickens.add(new Chicken());
     coop.setChicken(chickens);
 
-    Assert.assertFalse(coop.getChicken().isEmpty());
-    Assert.assertEquals(1,coop.getChicken().size());
+    Assertions.assertFalse(coop.getChicken().isEmpty());
+    Assertions.assertEquals(1,coop.getChicken().size());
 
 }
 
