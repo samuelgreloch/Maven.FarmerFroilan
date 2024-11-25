@@ -1,40 +1,25 @@
 package Days;
 
 import com.zipcodewilmington.froilansfarm.*;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.testng.AssertJUnit.assertFalse;
 import static org.testng.AssertJUnit.assertTrue;
 
 public class Tuesday {
-    FarmField farmField;
-    Trator trator;
-    Person<?> Froilan;
 
 
     @Test
-    public void MorningRoutine(){
+    public void MorningRoutine() {
 
     }
 
     @Test
-    public void HarvestingTest(){
-        trator.harvest(farmField);
-
-        for (CropRow<?> row : farmField) {
-                row.showCrops();
-            }
+    public void HarvestTest() {
+    Person person = new Person("Froilan");
+    CropDuster cropDuster = new CropDuster("");
     }
-//    public void testHarvestingOnTuesday() {
-//        // Froilan uses the Tractor to harvest the crops on Tuesday
-//        froilan.useTractorToHarvest(tractor, farm.getField());
-//
-//        // After harvesting, check that all crops in each row have been harvested
-//        for (CropRow row : farm.getField().getCropRows()) {
-//            for (Crop crop : row.getCrops()) {
-//                assertTrue("Crop should be harvested", crop.hasBeenHarvested());
-//            }
-//        }
 }
 //* On `Tuesday`, `Froilan` uses his `Tractor` to `harvest` each `Crop` in each `CropRow`.
 //check & make sure:
