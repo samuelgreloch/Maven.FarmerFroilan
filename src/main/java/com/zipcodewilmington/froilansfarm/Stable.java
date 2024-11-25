@@ -19,11 +19,11 @@ public class Stable extends Store<Horse>{
     }
 
 
-    @Override
-    public String toString() {
-        return "Stable{" +
-                "store=" + store +
-                ", horse=" + horse +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Stable{" +
+//                "store=" + store +
+//                ", horse=" + horse +
+//                '}';
+//    }
 }

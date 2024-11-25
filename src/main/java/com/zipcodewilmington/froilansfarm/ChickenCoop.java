@@ -13,14 +13,14 @@ public class ChickenCoop extends Store<Chicken>{
     }
 
     public List<Chicken> getChicken(){
-        return chickens;
+        return store.chickens;
     }
 
-    @Override
-    public String toString() {
-        return "ChickenCoop{" +
-                "store=" + store +
-                ", chickens=" + chickens +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "ChickenCoop{" +
+//                "store=" + store +
+//                ", chickens=" + chickens +
+//                '}';
+//    }
 }
