@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Vehicle<T extends Rider> implements NoiseMaker, Rideable{
+public  class Vehicle<T extends Rider> implements NoiseMaker, Rideable{
     public static boolean vehcileMakesNoise;
 
     public Vehicle(boolean b, boolean b1, boolean b2) {
@@ -27,12 +27,37 @@ public class Vehicle<T extends Rider> implements NoiseMaker, Rideable{
    return "vroom"; }
 
     @Override
-    public boolean ride() {
+    public boolean canMount() {
         return false;
     }
 
     @Override
-    public boolean canMount() {
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
+    }
+
+    @Override
+    public boolean ride() {
         return false;
     }
 }

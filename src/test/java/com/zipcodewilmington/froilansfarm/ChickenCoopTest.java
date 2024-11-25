@@ -4,18 +4,14 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class ChickenCoopTest {
-
 
 
 @Test
     public void ChickensInCoopTest1(){
     Store<Chicken> stores = new Store<>();
     ChickenCoop coop = new ChickenCoop();
-    List<Chicken> chickens = new ArrayList<>();
+   // List<Chicken> chickens = new ArrayList<>();
 
     stores.add(new Chicken());
     coop.setChicken(stores);
@@ -29,7 +25,7 @@ public class ChickenCoopTest {
     public void ChickensInCoopTest2(){
         Store<Chicken> stores = new Store<>();
         ChickenCoop coop = new ChickenCoop();
-        List<Chicken> chickens = new ArrayList<>();
+       // List<Chicken> chickens = new ArrayList<>();
 
         stores.add(new Chicken());
         stores.add(new Chicken());
@@ -43,7 +39,7 @@ public class ChickenCoopTest {
 
     //Adding 15 Chickens across 4 Coops
     @Test
-    public void addChickenToCoopTest(){
+    public void addChickenToCoopTest3(){
         ChickenCoop coop = new ChickenCoop();
         Store<Chicken> chickenList = new Store<>();
 
@@ -59,5 +55,24 @@ public class ChickenCoopTest {
 
     }
 
+
+
+    //Adding 10 Chickens across 4 Coops
+    @Test
+    public void addChickenToCoopTest(){
+        ChickenCoop coop = new ChickenCoop();
+        Store<Chicken> chickenList = new Store<>();
+
+
+        for (int i = 1; i <= 10; i++) {
+            Chicken chik = new Chicken(i);
+            chickenList.add(chik);
+
+        }
+        coop.setChicken(chickenList);
+
+        Assertions.assertEquals(10,coop.getChicken().size());
+
+    }
 
 }
