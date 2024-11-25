@@ -1,19 +1,23 @@
 package Days;
 
-import com.zipcodewilmington.froilansfarm.EarCorn;
-import com.zipcodewilmington.froilansfarm.Horse;
+import com.zipcodewilmington.froilansfarm.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class Wed {
 
-//Plant Corn on cropRow 4
+//Plant 3 CornStalk.
     @Test
     public void plantCornTest(){
+        CropRow<CornStalk> cornPlant = new CropRow<>();
+       // FarmField field = new FarmField();
+       // CornStalk corn = new CornStalk();
+        cornPlant.add(new CornStalk());
+        cornPlant.add(new CornStalk());
+        cornPlant.add(new CornStalk());
+        cornPlant.add(new CornStalk());
 
-
-
-
+        Assertions.assertEquals(4,cornPlant.size());
 
     }
 
@@ -22,11 +26,10 @@ public class Wed {
     public void feedEachHorseTest(){
 
             EarCorn corn = new EarCorn();
-            //  List<Horse> horseList = new ArrayList<>();
 
             for (int i = 1; i <= 10; i++) {
                 Horse horse = new Horse(i);
-                //Feeding 3 corns to each Horse
+                //Feeding 6 corns to each Horse
                 horse.eat(corn);
                 horse.eat(corn);
                 horse.eat(corn);
