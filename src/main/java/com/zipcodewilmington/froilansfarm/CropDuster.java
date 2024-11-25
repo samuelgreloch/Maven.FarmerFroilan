@@ -18,4 +18,10 @@ public class CropDuster extends FarmVehicle<Pilot> {
     public boolean canMount() {
         return false;
     }
+
+    public boolean isAircraft() {
+    return true;}
+
+    public boolean isCropDuster() {
+ return true;   }
 }

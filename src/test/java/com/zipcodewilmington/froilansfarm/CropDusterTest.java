@@ -10,7 +10,7 @@ class CropDusterTest {
 
                 @Test
 
-                public void VehicleMakesNoiseTest (){
+                public void CropDusterMakesNoiseTest (){
 
                         Vehicle<?> tractor = new FarmVehicle<>("Tractor");
                         String noise = tractor.makeNoise();
@@ -40,11 +40,11 @@ class CropDusterTest {
 
                 @Test
 
-                public void isVehicleTest(){
+                public void isCropDusterTest(){
 
-                        Vehicle vehicle = new Vehicle("Generic Vehicle");
+                        CropDuster cropDuster = new CropDuster("Generic Vehicle");
 
-                        assertTrue(vehicle.isVehicle(), "The object should be a vehicle.");
+                        assertTrue(cropDuster.isCropDuster(), "The object should be a vehicle.");
 
 
 
@@ -64,7 +64,7 @@ class CropDusterTest {
                 public void isAircraftTest(){
                        CropDuster cropDuster = new CropDuster("AT-802");
 
-                        assertTrue(false, "Cropduster is an Aircraft.");
+                        assertTrue(cropDuster.isAircraft(), "Cropduster is an Aircraft.");
 
                 }
 
