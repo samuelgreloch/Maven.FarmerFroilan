@@ -3,7 +3,7 @@ package com.zipcodewilmington.froilansfarm;
 
 
 public class Tractor extends FarmVehicle<Rider> {
-    public Tractor(boolean b, boolean b1, boolean b2) {
+    public Tractor(boolean isBroken, boolean hasFuel, boolean isRepaired) {
         super("");
     }
 
