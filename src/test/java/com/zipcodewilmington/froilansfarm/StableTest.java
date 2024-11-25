@@ -89,7 +89,7 @@ public class StableTest {
         public void VehicleMakesNoiseTest (){
 
 
-            Assertions.assertTrue(Trator.vehcileMakesNoise);
+            Assertions.assertTrue(Tractor.vehcileMakesNoise);
         }
 
 
