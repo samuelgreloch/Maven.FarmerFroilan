@@ -13,7 +13,7 @@ class TratorTest {
         public void VehicleMakesNoiseTest (){
 
 
-            Assertions.assertTrue(Trator.vehcileMakesNoise);
+            Assertions.assertTrue(Vehicle.vehcileMakesNoise);
         }
 
 
