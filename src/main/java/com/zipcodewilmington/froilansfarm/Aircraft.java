@@ -1,7 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 public class Aircraft extends Vehicle<Pilot> {
-    public Aircraft(boolean b, boolean b1, boolean b2) {
-        super(b, b1, b2);
+    public Aircraft(boolean isBroken, boolean hasFuel, boolean isRepaired) {
+        super(isBroken, hasFuel, isRepaired);
     }
 
     public boolean canFly() {

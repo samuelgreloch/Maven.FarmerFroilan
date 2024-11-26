@@ -15,6 +15,6 @@ class EaterTest {
     boolean result = person.eat(earCorn);
 
 
-    System.out.println("The person eats an earcorn" +result);
+    assertTrue(result);
     }
 }
