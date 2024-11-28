@@ -3,45 +3,77 @@ package Days;
 import com.zipcodewilmington.froilansfarm.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.testng.Assert;
 
 public class Wed {
-
-//Plant 3 CornStalk.
     @Test
-    public void plantCornTest(){
-        CropRow<CornStalk> cornPlant = new CropRow<>();
-       // FarmField field = new FarmField();
-       // CornStalk corn = new CornStalk();
-        cornPlant.add(new CornStalk());
-        cornPlant.add(new CornStalk());
-        cornPlant.add(new CornStalk());
-        cornPlant.add(new CornStalk());
+    public void FroilanRideHorses(){
+        Froilan froilan = new Froilan();
+        Farm farm = froilan.getFarm();
+        List<HorseStables> horseStables = farm.getHorseStables();
 
-        Assertions.assertEquals(4,cornPlant.size());
+        for(HorseStable horses: horseStables){
+            for (Horse horse: horses){
+                Assert.assertTrue(froilan.mount(horse));
+                Assert.assertTrue(froilan.dismount(horse));
+            }
+        }
+    }
+
+    @Test
+    public void FroilandaRideHorses(){
+        Froilanda froilanda = new Froilanda();
+        Farm farm = froilan.getFarm();
+        List<HorseStables> horseStables = farm.getHorseStables();
+
+        for(HorseStable horses: horseStables){
+            for (Horse horse: horses){
+                Assert.assertTrue(froilanda.mount(horse));
+                Assert.assertTrue(froilanda.dismount(horse));
+            }
+        }
+    }
+
+    @Test
+    public void FroilanFeedHorses(){
+        Froilanda froilanda = new Froilanda();
+        Farm farm = froilan.getFarm();
+        List<HorseStables> horseStables = farm.getHorseStables();
+
+        for(HorseStable horses: horseStables){
+            for (Horse horse: horses){
+
+                Assert.assertTrue(horse.eat(EarCorn));
+                Assert.assertTrue(horse.eat(EarCorn));
+                Assert.assertTrue(horse.eat(EarCorn));
+            }
+        }
+    }
+
+
+
+    @Test
+    public void FroilandaEatBreakfast(){
+        Froilan froilan = new Froilan();
+        froilan.eat(new EarCorn());
+        froilan.eat(new EarCorn());
+        froilan.eat(new EarCorn());
+        froilan.eat(new EarCorn());
+        froilan.eat(new EarCorn());
+        froilan.eat(new EarCorn());
+        froilan.eat(new EarCorn());
 
     }
 
-// Feed each horse 6 EarCorn
+
     @Test
-    public void feedEachHorseTest(){
+    public void FroilanPlantCrops(){
+        Froilan froilan = new Froilan();
+        FarmField field = froilan.getFarm().getFarmField();
+        Assert.assertTrue(froilan.plant(new CornStalk(), field.get(0)));
+        Assert.assertTrue(froilan.plant(new TomatoPlant(), field.get(1)));
+        Assert.assertTrue(froilan.plant(new TomatoPlant(), field.get(2)));
 
-            EarCorn corn = new EarCorn();
-
-            for (int i = 1; i <= 10; i++) {
-                Horse horse = new Horse(i);
-                //Feeding 6 corns to each Horse
-                horse.eat(corn);
-                horse.eat(corn);
-                horse.eat(corn);
-                horse.eat(corn);
-                horse.eat(corn);
-                horse.eat(corn);
-
-                Assertions.assertEquals(6, horse.numberComsumed(corn));
-
-            }
-
-        }
-
+    }
 }
 
