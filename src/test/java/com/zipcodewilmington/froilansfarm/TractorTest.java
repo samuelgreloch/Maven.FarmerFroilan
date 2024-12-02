@@ -2,13 +2,16 @@ package com.zipcodewilmington.froilansfarm;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class TractorTest {
     @Test
 
     public void TractorMakeNoise (){
-        Tractor tractor = new Tractor(false,true,false);
+        Tractor tractor = new Tractor(false);
         String noise = tractor.makeNoise();
         assertEquals("vRoom", noise);
     }
@@ -18,7 +21,7 @@ class TractorTest {
 
     public void VehicleIsRidableTest(){
 
-        Tractor tractor = new Tractor(true, false, true) {
+        Tractor tractor = new Tractor(true) {
 
         };
 
@@ -30,7 +33,7 @@ class TractorTest {
 
     public void CanOperateTest(){
 
-        Tractor tractor = new Tractor(false, true, false) {
+        Tractor tractor = new Tractor(false) {
 
         };
 
@@ -38,29 +41,21 @@ class TractorTest {
 
     }
 
-    @Test
-
-    public void isTractorTest(){
-
-        Tractor tractor = new Tractor(false,true,false) {
-
-        };
-
-        assertTrue(tractor.isTractor(), "The object should be a vehicle.");
 
 
-
-    }
 
 
 
     @Test
+
 
     public void canHarvestTest(){
 
-        Tractor tractor = new Tractor(false,true,false);
+        CropRow cropRow = new CropRow();
+        Tractor tractor = new Tractor(true);
+        boolean result = tractor.canHarvest(cropRow);
+        assertTrue(result, "This tractor can harvest for the season of corn.");
 
-        assert tractor.canHarvest()==true;
 
     }
 

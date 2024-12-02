@@ -3,12 +3,11 @@ package com.zipcodewilmington.froilansfarm;
 
 
 public class Tractor extends FarmVehicle<Rider> {
-    public Tractor(boolean b, boolean b1, boolean b2) {
+    private boolean canOperate;
+
+    public Tractor(boolean a) {
         super("");
     }
-
-    public boolean canHarvest() {
-   return true; }
 
 
     public String makeNoise() {
@@ -17,9 +16,11 @@ public class Tractor extends FarmVehicle<Rider> {
     public boolean isRidable() {
    return false; }
 
-    public boolean canOperate() {
+    public boolean canOperate(boolean canOperate) {
+        this.canOperate = canOperate;
    return false; }
 
-    public boolean isTractor() {
-   return true; }
+    public boolean canHarvest(CropRow cropRow) {
+return false;
+    }
 }
